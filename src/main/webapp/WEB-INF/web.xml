@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>liberarymanagementystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>
+  	<servlet-name>DEMO1</servlet-name>
+  	<jsp-file>/controller/adminregistercontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO1</servlet-name>
+  	<url-pattern>/registerAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+  	<servlet-name>DEMO2</servlet-name>
+  	<jsp-file>/controller/adminlogincontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO2</servlet-name>
+  	<url-pattern>/loginadmin</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>DEMO3</servlet-name>
+  	<jsp-file>/controller/userlogincontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO3</servlet-name>
+  	<url-pattern>/loginstudent</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>DEMO4</servlet-name>
+  	<jsp-file>/controller/userregistercontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO4</servlet-name>
+  	<url-pattern>/registeruser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO5</servlet-name>
+  	<jsp-file>/controller/studentissuebookcontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO5</servlet-name>
+  	<url-pattern>/issuebook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO6</servlet-name>
+  	<jsp-file>/controller/searchbookcontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO6</servlet-name>
+  	<url-pattern>/searchbook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO7</servlet-name>
+  	<jsp-file>/controller/returnbookcontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO7</servlet-name>
+  	<url-pattern>/returnbook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO8</servlet-name>
+  	<jsp-file>/controller/renewbookcontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO8</servlet-name>
+  	<url-pattern>/renewbook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO10</servlet-name>
+  	<jsp-file>/controller/addbookcontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO10</servlet-name>
+  	<url-pattern>/addbook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO11</servlet-name>
+  	<jsp-file>/controller/deletebookcontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO11</servlet-name>
+  	<url-pattern>/deletebook</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DEMO12</servlet-name>
+  	<jsp-file>/controller/editbookdescriptioncontroller.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DEMO12</servlet-name>
+  	<url-pattern>/editbookdescription</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
