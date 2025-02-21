@@ -3,6 +3,8 @@
 <%@page import="com.liberarymanagement.daoimpl.StudentDaoImpl"%>
 <%@page import="com.liberarymanagement.dao.StudentDao"%>			
 <% 
+
+if(session.getAttribute("studentemail")!=null){
       String name=request.getParameter("name");
       String stuemail =(String)session.getAttribute("studentemail"); 
 	StudentDao daoImpl = new StudentDaoImpl();
@@ -11,5 +13,9 @@
 		}
 		else{
 			response.sendRedirect("returnbook.jsp?msg=returnFail");
-		}	
+		}
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>  

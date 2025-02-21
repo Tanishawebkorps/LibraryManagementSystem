@@ -10,13 +10,11 @@ class="com.liberarymanagement.entity.Admin" scope="page">
 AdminDaoImpl daoImpl=new AdminDaoImpl();
 
 if(daoImpl.registerAdmin(admin)){
+	    session.setAttribute("adminemail",admin.getAdminEmail());	
 	    boolean b=Helper.sendEmail(admin.getAdminEmail(),"admin","admindetails");
 	    if(b){
         response.sendRedirect("adminlogin.jsp?msg=adminRegSuccess");
 }
-	    else{
-	    	response.sendRedirect("adminregister.jsp?msg=adminRegFail");
-	    } 
 }
 	    else{
 	    	response.sendRedirect("adminregister.jsp?msg=adminRegFail");

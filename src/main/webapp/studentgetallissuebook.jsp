@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-<%
+<%   if(session.getAttribute("studentemail")!=null){
     String email = (String) session.getAttribute("studentemail");
     System.out.println(email);
     StudentDao daoImpl = new StudentDaoImpl();
@@ -61,7 +61,11 @@
 <% 
     } else {
         response.sendRedirect("studentdashboard.jsp?msg=noBookIssue");
-    }   
+    }
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>
 </body>
 </html>

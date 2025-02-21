@@ -31,6 +31,7 @@ th, td {
 <body>
  <p>View-Book</p>
 <%
+if(session.getAttribute("adminemail")!=null){
 	List<Books> lst = Helper.getAllBooks();	
 	
 	if(lst!=null){ %>
@@ -66,6 +67,10 @@ th, td {
 	else{
 			response.sendRedirect("admindashboard.jsp?msg=noBook");
 		}	
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>
 </body>
 </html>

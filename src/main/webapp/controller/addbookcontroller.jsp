@@ -8,12 +8,16 @@ class="com.liberarymanagement.entity.Books" scope="page">
 </jsp:useBean>
 <jsp:setProperty property="*" name="book"/>
 <%
+if(session.getAttribute("adminemail")!=null){
 AdminDaoImpl daoImpl=new AdminDaoImpl();
-
 if(daoImpl.addBook(book)){
 	response.sendRedirect("admindashboard.jsp?msg=addSuccessfully");
 }
 else{
 	response.sendRedirect("addbook.jsp?msg=addFail");
 } 
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>

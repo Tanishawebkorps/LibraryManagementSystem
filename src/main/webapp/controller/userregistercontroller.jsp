@@ -14,9 +14,6 @@ if(daoImpl.registerStudent(student)){
    if(b){
    response.sendRedirect("userlogin.jsp?msg=userRegSuccess");
 }
-   else{
-		response.sendRedirect("userregister.jsp?msg=userRegFail");
-	} 
 }
 else{
 	response.sendRedirect("userregister.jsp?msg=userRegFail");

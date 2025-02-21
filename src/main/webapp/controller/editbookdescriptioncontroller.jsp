@@ -4,6 +4,7 @@
 <%@page import="com.liberarymanagement.dao.AdminDao"%>
 
 <%
+if(session.getAttribute("adminemail")!=null){
 String name=request.getParameter("name");
 String description =request.getParameter("description");
 String author=request.getParameter("author");
@@ -21,4 +22,8 @@ if(daoImpl.editBookDescriptions(name , description ,author, edition , quantity))
 else{
 	response.sendRedirect("editbookdescription.jsp?msg=editFail");
 } 
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>

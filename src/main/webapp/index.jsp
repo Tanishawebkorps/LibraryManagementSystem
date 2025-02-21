@@ -89,6 +89,10 @@
         message="User Logout successfully";
         msgColor="green";
     }
+    if(msg!=null && msg.equals("loginfirst")){
+        message="You Need To Login First";
+        msgColor="red";
+    }
     if(msg!=null && msg.equals("adminlogoutSuccess")){
         message="Admin Logout successfully";
         msgColor="green";

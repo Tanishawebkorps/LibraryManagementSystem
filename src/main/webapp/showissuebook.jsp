@@ -45,6 +45,7 @@ function showStudent(stuemail, btn) {
 </head>
 <body>
 	<%
+	if(session.getAttribute("adminemail")!=null){
 	AdminDao daoImpl = new AdminDaoImpl();
 	Map<String, String> map = daoImpl.getIssuedBooks();
 	if (map != null && !map.isEmpty()) {
@@ -66,6 +67,10 @@ function showStudent(stuemail, btn) {
 	<%
 	} else {
 		response.sendRedirect("admindashboard.jsp?msg=noBookIssue");
+	}
+	}
+	else{
+		response.sendRedirect("index.jsp?msg=loginfirst");
 	}
 	%>
 </body>

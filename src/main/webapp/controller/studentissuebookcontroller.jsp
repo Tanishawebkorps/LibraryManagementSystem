@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@page import="com.liberarymanagement.daoimpl.StudentDaoImpl"%>
 <%@page import="com.liberarymanagement.dao.StudentDao"%>			
-<% 
+<%
+if(session.getAttribute("studentemail")!=null){
 String name =request.getParameter("name");
 String studentemail =(String)session.getAttribute("studentemail");   
 int days =Integer.parseInt(request.getParameter("days"));
@@ -18,5 +19,9 @@ if(days<=10){
 }
 else{
 	response.sendRedirect("studentissuebook.jsp?msg=issuemax");
+}
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
 }
 %>  

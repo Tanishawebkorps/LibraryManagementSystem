@@ -3,7 +3,8 @@
 <%@page import="com.liberarymanagement.daoimpl.StudentDaoImpl"%>
 <%@page import="com.liberarymanagement.dao.StudentDao"%>			
 <% 
-System.out.println("renew book"+session.getAttribute("studentemail"));
+
+if(session.getAttribute("studentemail")!=null){
       String name=request.getParameter("name");
       String stuemail =(String)session.getAttribute("studentemail"); 
       int extended_days =Integer.parseInt(request.getParameter(" extended_days"));
@@ -19,4 +20,8 @@ System.out.println("renew book"+session.getAttribute("studentemail"));
      else{
     	 response.sendRedirect("renew.jsp?msg=renewmax");
      }
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>  

@@ -30,7 +30,7 @@ th, td {
 </style>
 </head>
 <body>
- <%  
+ <%   if(session.getAttribute("studentemail")!=null){
       String authore =request.getParameter("authore");
 	StudentDao daoImpl = new StudentDaoImpl();
 	List <Books> lst =daoImpl.searchBook(authore);
@@ -69,7 +69,11 @@ th, td {
 			<p style="color: red;" >No Book Present With This Authore Name Please Try Again ! </p>
 			<a href="studentdashboard.jsp">Back to dashboard</a>
 	   </div>
-	<% 	}	
+	<% 	}
+ }
+ else{
+		response.sendRedirect("index.jsp?msg=loginfirst");
+	}
 %>
 </body>
 </html>  

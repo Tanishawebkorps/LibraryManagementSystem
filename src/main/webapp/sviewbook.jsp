@@ -30,7 +30,7 @@ th, td {
 </head>
 <body>
  <p>View-Book</p>
-<%  System.out.println("view book"+session.getAttribute("studentemail"));
+<% if(session.getAttribute("studentemail")!=null){
 	List<Books> lst = Helper.getAllBooks();	
 	
 	if(lst!=null){ %>
@@ -67,6 +67,10 @@ th, td {
 		else {
 			response.sendRedirect("studentdashboard.jsp?msg=noBookInLib");
 		}	
+}
+else{
+	response.sendRedirect("index.jsp?msg=loginfirst");
+}
 %>
 </body>
 </html>
